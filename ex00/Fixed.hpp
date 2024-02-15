@@ -7,8 +7,8 @@
 class	Fixed
 {
 	private:
-		int					_fixed_point;
-		static const int	_eight;
+		int					_binary;
+		static const int	_width = 8;
 
 	public:
 		Fixed();
@@ -17,5 +17,6 @@ class	Fixed
 		Fixed &operator= (const Fixed &fixed);
 		int		getRawBits(void) const;
 		void	setRawbits(int const raw);
+		void	toInt(void);
 };
 #endif
