@@ -2,6 +2,7 @@
 
 Fixed::Fixed()
 {
+	this->_binary = 0;
 	std::cout << "Default constructor called" << std::endl;
 }
 
@@ -10,14 +11,13 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &Fixed)
+Fixed::Fixed(const Fixed &fixed)
 {
-	this->_width;
-	this->_binary;
+	this->_binary = fixed._binary;
 	std::cout << "Copy constructor called" << std::endl;
 }
 
-Fixed&	Fixed::operator=(const Fixed &fixed)
+Fixed	&Fixed::operator=(const Fixed &fixed)
 {
 	if (this != &fixed)
 	{
@@ -34,9 +34,5 @@ int	Fixed::getRawBits(void) const
 
 void	Fixed::setRawbits(int const raw)
 {
-}
-
-void	Fixed::toInt(void)
-{
-
+	this->_binary = raw;
 }
