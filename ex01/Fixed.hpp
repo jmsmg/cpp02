@@ -7,8 +7,8 @@
 class	Fixed
 {
 	private:
-		int					_binary;
-		static const int	_width = 8;
+		int					_value;
+		static const int	_fractional_bits = 8;
 
 	public:
 		Fixed();
@@ -19,5 +19,8 @@ class	Fixed
 		Fixed	&operator= (const Fixed &fixed);
 		int		getRawBits(void) const;
 		void	setRawbits(int const raw);
+	public:
+		int		toInt(void) const;
+		float	toFloat(void) const;
 };
 #endif

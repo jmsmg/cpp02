@@ -7,8 +7,8 @@
 class	Fixed
 {
 	private:
-		int					_binary;
-		static const int	_width = 8;
+		int					_value;
+		static const int	_fractional_bits = 8;
 
 	public:
 		Fixed();
