@@ -13,14 +13,16 @@ class	Fixed
 	public:
 		Fixed();
 		Fixed(int num);
-		Fixed(float num);
-		~Fixed();
+		Fixed(const float num);
 		Fixed(const Fixed &fixed);
-		Fixed	&operator= (const Fixed &fixed);
+		~Fixed();
+		Fixed	&operator = (const Fixed &fixed);
 		int		getRawBits(void) const;
 		void	setRawbits(int const raw);
-	public:
 		int		toInt(void) const;
 		float	toFloat(void) const;
 };
+
+std::ostream	&operator << (std::ostream &out, const Fixed &fixed);
+
 #endif
