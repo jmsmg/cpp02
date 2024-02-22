@@ -21,7 +21,8 @@ Fixed	&Fixed::operator=(const Fixed &fixed)
 {
 	if (this != &fixed)
 	{
-		std::cout << "Copy assignment operator called" << std::endl;
+		std::cout << "Assignment operator called" << std::endl;
+		this->_binary = fixed.getRawBits();
 	}
 	return (*this);
 }
