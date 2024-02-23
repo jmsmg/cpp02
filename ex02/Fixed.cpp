@@ -54,7 +54,7 @@ std::ostream	&operator<<(std::ostream &out, const Fixed &fixed)
 	return (out);
 }
 
-Fixed	Fixed::operator+(Fixed &fixed) const
+Fixed	Fixed::operator+(Fixed &fixed)
 {
 	Fixed	tmp(this->toFloat() + fixed.toFloat());
 	return (tmp);

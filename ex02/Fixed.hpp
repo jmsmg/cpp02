@@ -17,7 +17,8 @@ class	Fixed
 		Fixed(const Fixed &fixed);
 		~Fixed();
 		Fixed	&operator=(const Fixed &fixed);
-		Fixed	operator+(Fixed &fixed) const;
+		Fixed	operator+(Fixed const &fixed) const;
+		
 		Fixed	operator-(Fixed &fixed) const;
 		Fixed	operator*(Fixed &fixed) const;
 		Fixed	operator/(Fixed &fixed) const;
