@@ -104,7 +104,7 @@ bool	Fixed::operator>(Fixed const &fixed) const
 
 bool	Fixed::operator<=(Fixed const &fixed) const
 {
-	if (this->getRawBits() >= fixed.getRawBits())
+	if (this->getRawBits() <= fixed.getRawBits())
 	{
 		return (true);
 	}
